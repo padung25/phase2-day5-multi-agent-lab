@@ -1,5 +1,6 @@
 # Lab 20: Hệ Thống Nghiên Cứu Multi-Agent
-## Kết quả và báo cáo sẽ ở thư mục report/traces
+Kết quả và báo cáo sẽ ở thư mục report/traces
+
 Repo này triển khai một research assistant theo hướng production-lite với workflow:
 
 ```text
