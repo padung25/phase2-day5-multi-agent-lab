@@ -14,6 +14,14 @@ class AgentName(StrEnum):
     CRITIC = "critic"
 
 
+class RouteName(StrEnum):
+    RESEARCHER = "researcher"
+    ANALYST = "analyst"
+    WRITER = "writer"
+    CRITIC = "critic"
+    DONE = "done"
+
+
 class ResearchQuery(BaseModel):
     query: str = Field(..., min_length=5)
     max_sources: int = Field(default=5, ge=1, le=20)
@@ -38,4 +46,10 @@ class BenchmarkMetrics(BaseModel):
     latency_seconds: float
     estimated_cost_usd: float | None = None
     quality_score: float | None = Field(default=None, ge=0, le=10)
+    quality_source: str = "automated_proxy"
+    citation_coverage: float | None = Field(default=None, ge=0, le=1)
+    cited_claims: int = Field(default=0, ge=0)
+    total_claims: int = Field(default=0, ge=0)
+    error_count: int = Field(default=0, ge=0)
+    failed: bool = False
     notes: str = ""

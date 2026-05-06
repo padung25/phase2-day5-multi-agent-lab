@@ -22,3 +22,8 @@ benchmark:
     - "Research GraphRAG state-of-the-art and write a 500-word summary"
     - "Compare single-agent and multi-agent workflows for customer support"
     - "Summarize production guardrails for LLM agents"
+  peer_review_scores: {}
+  # Fill after peer review if available, for example:
+  # peer_review_scores:
+  #   baseline-1: 6
+  #   multi-agent-1: 8
